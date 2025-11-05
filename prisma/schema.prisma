@@ -1,0 +1,84 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// 業界マスター
+model Industry {
+  id        Int       @id @default(autoincrement())
+  name      String    @unique
+  createdAt DateTime  @default(now())
+  sectors   Sector[]
+  customers Customer[]
+}
+
+// 業種マスター
+model Sector {
+  id         Int        @id @default(autoincrement())
+  name       String
+  industryId Int
+  industry   Industry   @relation(fields: [industryId], references: [id], onDelete: Cascade)
+  createdAt  DateTime   @default(now())
+  customers  Customer[]
+
+  @@unique([name, industryId])
+}
+
+// 顧客データ（150万件対応）
+model Customer {
+  id         Int      @id @default(autoincrement())
+  name       String
+  email      String   @unique // メールアドレスは一意
+  company    String?
+  position   String?
+  industryId Int?
+  sectorId   Int?
+  industry   Industry? @relation(fields: [industryId], references: [id], onDelete: SetNull)
+  sector     Sector?   @relation(fields: [sectorId], references: [id], onDelete: SetNull)
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+
+  @@index([industryId])
+  @@index([sectorId])
+}
+
+// 送信履歴（メール一括送信の記録）
+model SendHistory {
+  id              Int      @id @default(autoincrement())
+  subject         String   // 件名
+  bodyTemplate    String   // 本文テンプレート（差し込み前）
+  htmlContent     String?  // 生成されたHTMLコンテンツ（サンプル）
+  totalRecipients Int      // 総送信先数
+  successCount    Int      // 成功数
+  failedCount     Int      // 失敗数
+  primaryColor    String   // プライマリカラー
+  accentColor     String   // アクセントカラー
+  font            String   // フォント設定
+  recipients      String   // 送信先顧客リスト（JSON形式）
+  sentAt          DateTime @default(now()) // 送信日時
+  createdAt       DateTime @default(now())
+
+  @@index([sentAt])
+}
+
+// CSVインポート履歴
+model ImportHistory {
+  id              Int      @id @default(autoincrement())
+  fileName        String   // インポートしたファイル名
+  totalRows       Int      // CSVファイルの総行数
+  successCount    Int      // 成功してインポートされた件数
+  errorCount      Int      // エラーになった件数
+  industriesCount Int      // 業界数
+  sectorsCount    Int      // 業種数
+  importedAt      DateTime @default(now()) // インポート日時
+  createdAt       DateTime @default(now())
+
+  @@index([importedAt])
+}

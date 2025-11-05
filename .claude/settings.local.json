@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app:*)",
+      "Bash(node --version:*)",
+      "Bash(npm --version:*)",
+      "Bash(brew install:*)",
+      "Bash(/usr/local/bin/npx create-next-app@latest . --typescript --tailwind --app --no-src-dir --import-alias \"@/*\" --use-npm)",
+      "Bash(export PATH=\"/usr/local/bin:$PATH\")",
+      "Bash(npm init -y)",
+      "Bash(npm install:*)",
+      "Bash(export PATH=\"/usr/local/bin:/usr/bin:/bin:$PATH\")",
+      "Bash(npm run dev:*)",
+      "Bash(lsof:*)",
+      "Bash(npx prisma init:*)",
+      "Bash(npx prisma migrate dev --name init)",
+      "Bash(test:*)",
+      "Bash(cat:*)",
+      "Bash(node test-csv-parse.js:*)",
+      "Bash(xargs kill:*)",
+      "Bash(npx prisma migrate:*)",
+      "Bash(npx prisma db push:*)",
+      "Bash(sqlite3:*)",
+      "Bash(/usr/sbin/lsof:*)",
+      "Bash(npx tsx:*)",
+      "Bash(node -e:*)",
+      "Bash(curl:*)",
+      "Bash(node:*)",
+      "Bash(kill:*)",
+      "Bash(/usr/local/bin/npx tsx:*)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

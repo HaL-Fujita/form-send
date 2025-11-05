@@ -1,0 +1,11 @@
+name,email,company,position,industry,sector
+田中太郎,tanaka@example-tech.jp,株式会社テックイノベーション,代表取締役,IT・テクノロジー,SaaS・クラウドサービス
+佐藤花子,sato@digital-solutions.jp,デジタルソリューションズ株式会社,営業部長,IT・テクノロジー,システム開発
+鈴木一郎,suzuki@finance-corp.jp,ファイナンスコーポレーション,経営企画室長,金融,銀行・証券
+高橋美咲,takahashi@retail-company.jp,リテールカンパニー株式会社,マーケティング部長,小売・EC,EC・通販
+伊藤健太,ito@medical-group.jp,メディカルグループ,人事部長,医療・ヘルスケア,病院・クリニック
+渡辺さくら,watanabe@edu-tech.jp,エデュテック株式会社,取締役,教育,オンライン教育
+山本大輔,yamamoto@manufacturing.jp,製造株式会社,工場長,製造業,自動車・部品
+中村由美,nakamura@consulting.jp,コンサルティング株式会社,コンサルタント,コンサルティング,経営コンサルティング
+小林正樹,kobayashi@logistics.jp,ロジスティクス株式会社,物流部長,物流・運輸,宅配・配送
+加藤あい,kato@real-estate.jp,不動産株式会社,営業担当,不動産,賃貸・管理

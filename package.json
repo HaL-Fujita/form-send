@@ -1,0 +1,39 @@
+{
+  "name": "fuji",
+  "version": "1.0.0",
+  "description": "HTML Email Generation Tool with Claude Sonnet API",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.68.0",
+    "@prisma/client": "^6.18.0",
+    "@tailwindcss/postcss": "^4.1.16",
+    "@types/node": "^24.9.2",
+    "@types/papaparse": "^5.3.16",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "autoprefixer": "^10.4.21",
+    "dotenv": "^17.2.3",
+    "form-data": "^4.0.4",
+    "next": "^16.0.1",
+    "nodemailer": "^7.0.10",
+    "openai": "^6.7.0",
+    "papaparse": "^5.5.3",
+    "postcss": "^8.5.6",
+    "prisma": "^6.18.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.16",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^7.0.3"
+  }
+}
