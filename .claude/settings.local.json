@@ -30,7 +30,14 @@
       "Bash(/usr/local/bin/npx tsx:*)",
       "Bash(git init:*)",
       "Bash(git remote add:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nHTMLメール一括送信システムの初期実装\n\n## 主な機能\n- Claude Sonnet APIによるHTMLメール自動生成\n- パーソナライズ変数対応（{{会社名}}、{{名前}}、{{役職}}）\n- CSV一括インポート（業界19種類、業種10種類対応）\n- 業界・業種別フィルタリング\n- メール送信履歴管理\n- Prisma + SQLiteでのデータ管理\n- レスポンシブUIデザイン\n\n## 技術スタック\n- Next.js 15 + React 19\n- TypeScript\n- Tailwind CSS\n- Prisma ORM\n- Claude Sonnet API\n- Nodemailer (Gmail SMTP)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(gh --version:*)",
+      "Bash(gh auth:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(gh repo create:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
